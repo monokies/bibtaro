@@ -1,5 +1,6 @@
 class SandboxController < ApplicationController
   def sample_www
+      @sampledbs = Sampledb.all
   end
 
   def sample_api
