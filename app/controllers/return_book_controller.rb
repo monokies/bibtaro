@@ -1,19 +1,53 @@
+require "date"
+
 class ReturnBookController < ApplicationController
   def return_api
     # The below code is my ruby practice! I delete this later.
-    @debug_msg = params
-    bookId = params[:bookId]
-    if bookId == '12345' then
-      @return_msg = 'Success!'
+    book_id = params[:bookId]
+    user_code = params[:userCode]
+    if params[:lentTo]
+      lent_to = params[:lentTo]
     else
-      @return_msg = 'Fail!'
+      lent_to = DateTime.now.strftime("%Y-%m-%d %H:%M:%S")
     end
-    # Processes of this api are below.
-    # 100. change return type to json
-    # 200. check parameter(not important)
-    # 300. load existing record
-    # 400. update database
-    # 500. return message
-    # 600. delete erb file(not important)
+
+    if has_lent_book(book_id, user_code) then
+      puts('having!')
+      begin
+        return_book(book_id, user_code, lent_to)
+        status = :ok
+        message = '成功！'
+      rescue => e
+        puts(e)
+        status = :bad_request
+        message = '貸し出しトランザクションに失敗しました。'
+      end
+    else
+      puts('not having!')
+      status = :bad_request
+      message = '貸し出されている本はありません。'
+    end
+
+    res = {'message' => message}
+    render :json => res, :status => status
   end
+
+  def has_lent_book(book_id, user_code)
+    # Impliment database process after created database.
+    if book_id == '00000000' then
+      return false
+    end
+    return true
+  end
+
+  def return_book(book_id, user_code, lent_to)
+    # Impliment database process after created database.
+    # Currently, this define return `true` for all access!
+    puts('The process of return is unimpliment.')
+    # This is for test.
+    if user_code == '99999999' then
+      raise IOError, '更新時にエラーが発生しました'
+    end
+  end
+
 end
