@@ -8,3 +8,7 @@
 Sampledb.create(:name => 'taro', :age => 20)
 Sampledb.create(:name => 'jiro', :age => 25)
 Sampledb.create(:name => 'hanako', :age => 30)
+# サンプルデータ(BookRentalStatus)
+BookRentalStatus.create(:bookId => 1, :userId => 1, :status => 1, :lentFrom => '2016-12-01', :scheduledLentTo => '2017-01-01', :lentTo => '2017-01-01')
+BookRentalStatus.create(:bookId => 2, :userId => 2, :status => 2, :lentFrom => '2016-12-01', :scheduledLentTo => '2017-01-01', :lentTo => '2017-01-01')
+BookRentalStatus.create(:bookId => 3, :userId => 3, :status => 3, :lentFrom => '2016-12-01', :scheduledLentTo => '2017-01-01', :lentTo => '2017-01-01')
