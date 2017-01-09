@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Sampledb.create(:name => 'taro', :age => 20)
+Sampledb.create(:name => 'jiro', :age => 25)
+Sampledb.create(:name => 'hanako', :age => 30)

@@ -1,0 +1,9 @@
+<h1>Hello!</h1>
+<p>これはテスト用のサンプル画面です。成功★</p>
+
+<p>下記はDBから取得した値</p>
+<ul>
+<% @sampledbs.each do |sd| %>
+  <li><%= sd.name %>: <%= sd.age %></li>
+<% end %>
+</ul>
