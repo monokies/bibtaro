@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103075630) do
+ActiveRecord::Schema.define(version: 20170109045417) do
+
+  create_table "book_rental_statuses", force: :cascade do |t|
+    t.integer  "bookId"
+    t.integer  "userId"
+    t.integer  "status"
+    t.date     "lentFrom"
+    t.date     "scheduledLentTo"
+    t.date     "lentTo"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "sampledbs", force: :cascade do |t|
     t.string   "name"
