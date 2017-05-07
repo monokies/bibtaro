@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post 'return_book/return_api'
+
   # sandbox用のルート
   # 基本的にはrails generateで作成されるので、いじる必要なし。
   get 'sandbox/sample_www'
