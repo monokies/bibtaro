@@ -124,3 +124,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Memo file.
+memo
