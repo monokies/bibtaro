@@ -127,3 +127,6 @@ ENV/
 
 # Memo file.
 memo
+
+# SQLLite
+db.sqlite3
