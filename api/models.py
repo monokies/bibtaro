@@ -2,9 +2,9 @@
 from django.db import models
 
 class BookRentalStatus(models.Model):
-    book_id = models.CharField(max_length=10)
-    user_id = models.CharField(max_length=10)
-    status = models.CharField(max_length=10)
+    book_id = models.IntegerField(max_length=10)
+    user_id = models.IntegerField(max_length=10)
+    status = models.IntegerField(max_length=10)
     lent_from = models.DateTimeField()
     scheduled_lent_to = models.DateTimeField()
     lent_to = models.DateTimeField()
