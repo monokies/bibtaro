@@ -2,14 +2,24 @@
 
 # Create your views here.
 from rest_framework import viewsets
-from django.http import JsonResponse
 from .models import BookRentalStatus
+from .models import Books
+from .models import Users
 from .serializer import BookRentalStatusSerializer
+from .serializer import BooksSerializer
+from .serializer import UsersSerializer
 
-def testview(request):
-    data = {'hoge': 'foo'}
-    return JsonResponse(data)
 
 class BookRentalStatusViewSet(viewsets.ModelViewSet):
     queryset = BookRentalStatus.objects.all()
     serializer_class = BookRentalStatusSerializer
+
+
+class BooksViewSet(viewsets.ModelViewSet):
+    queryset = Books.objects.all()
+    serializer_class = BooksSerializer
+
+
+class UsersViewSet(viewsets.ModelViewSet):
+    queryset = Users.objects.all()
+    serializer_class = UsersSerializer
