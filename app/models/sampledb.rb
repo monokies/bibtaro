@@ -1,2 +1,0 @@
-class Sampledb < ApplicationRecord
-end
