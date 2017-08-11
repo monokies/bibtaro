@@ -12,6 +12,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- BootstrapのJS読み込み -->
   <script src="{% static "bootstrap-3.3.7-dist/js/bootstrap.min.js" %}"></script>
+  <!-- React js 読み込み -->
+  <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.13.3.js"></script>
   <!-- API 呼び出し（サンプル） -->
   <script>
   $(function() {
@@ -33,6 +38,7 @@
       });
     });
   });
+
   </script>
   </head>
 <body>
@@ -96,6 +102,8 @@
     </div>
   </div>
   <!-- 練習用なので、消してもらって大丈夫です! -->
+  <div id="app"></div>
+  <script type="text/babel" src="{% static "react.js" %}"></script>
   <form>
     <input id="search" type="button" value="test" />
   </form>
