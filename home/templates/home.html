@@ -72,6 +72,7 @@
 </div>
 </nav>　
 </div>
+  <form>
 <div class="jumbotron">
   <div class="container">
     <h3>検索機能</h3>
@@ -100,13 +101,12 @@
         </select>
       </div>
     </div>
+    <script type="text/babel" src="{% static "react.js" %}"></script>
+    <input id="search2" type="button" class="btn btn-default pull-right" value="検索" onClick="book_search()" />
+    <div id="result" class="container"></div>
   </div>
   <!-- 練習用なので、消してもらって大丈夫です! -->
   <div id="app"></div>
-  <script type="text/babel" src="{% static "react.js" %}"></script>
-  <form>
-    <input id="search" type="button" value="test" />
-    <input id="search2" type="button" value="test2" onClick="sh()" />
   </form>
   <table id="result" class="table table-striped"></table>
 </body>
