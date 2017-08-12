@@ -58,9 +58,12 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">検索</a></li>
       <li><a href="#">登録</a></li>
+      <!-- 以下は作成箇所
       <li><a href="#">貸出</a></li>
       <li><a href="#">予約</a></li>
+      -->
     </ul>
+    <!-- 未作成
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">マイページ<span class="caret"></span></a>
@@ -68,6 +71,7 @@
         <li><a href="#">履歴</a></li>
       </ul>
     </ul>
+    -->
   </div>
 </div>
 </nav>　
@@ -103,10 +107,8 @@
     </div>
     <script type="text/babel" src="{% static "react.js" %}"></script>
     <input id="search2" type="button" class="btn btn-default pull-right" value="検索" onClick="book_search()" />
-    <div id="result" class="container"></div>
+    <div id="result"></div>
   </div>
-  <!-- 練習用なので、消してもらって大丈夫です! -->
-  <div id="app"></div>
   </form>
   <table id="result" class="table table-striped"></table>
 </body>
