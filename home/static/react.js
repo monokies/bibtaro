@@ -1,5 +1,18 @@
-function book_search() {
-  fetch('http://127.0.0.1:8000/api/books').then(
+function searchBook() {
+  var requestUrl = 'http://127.0.0.1:8000/api/books';
+  function createParameter() {
+    let idList = ['title', 'author', 'category'];
+    let params = [];
+    for (let i in idList) {
+      let t = idList[i];
+      let v = document.getElementById(t).value;
+      if (v !== null && v !== '') {
+        params.push(encodeURIComponent(t) + '=' + encodeURIComponent(v));
+      }
+    }
+    return params.join('&');
+  };
+  fetch(requestUrl + '?' + createParameter()).then(
     function(response) {
       return response.json();
   }).then(
