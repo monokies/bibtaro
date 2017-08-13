@@ -26,7 +26,8 @@ function searchBook() {
                 <th>画像</th>
               </tr>
       )
-      const body = [0].map((n) =>
+      let t = [...Array(json.length).keys()]
+      const body = t.map((n) =>
               <tr>
                 <td>1</td>
                 <td>{json[n].author}</td>
