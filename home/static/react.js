@@ -33,7 +33,7 @@ function searchBook() {
                 <td>{json[n].author}</td>
                 <td>{json[n].title}</td>
                 <td>{json[n].publishedDate}</td>
-                <td>画像</td>
+                <td><img src={json[n].image} /></td>
               </tr>
       )
       const element = (
