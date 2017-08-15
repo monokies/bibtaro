@@ -24,6 +24,7 @@ function searchBook() {
                 <th>タイトル</th>
                 <th>発行日</th>
                 <th>画像</th>
+                <th></th>
               </tr>
       )
       let t = [...Array(json.length).keys()]
@@ -33,7 +34,8 @@ function searchBook() {
                 <td>{json[n].author}</td>
                 <td>{json[n].title}</td>
                 <td>{json[n].publishedDate}</td>
-                <td><img src={json[n].image} /></td>
+                <td><img height="150" src={json[n].image} /></td>
+                <td><button className="btn btn-default">読む</button></td>
               </tr>
       )
       const element = (
