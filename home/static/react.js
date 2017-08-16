@@ -12,6 +12,9 @@ function searchBook() {
     }
     return params.join('&');
   };
+  function openPdf() {
+    window.open('/static/sample.pdf');
+  }
   fetch(requestUrl + '?' + createParameter()).then(
     function(response) {
       return response.json();
@@ -35,7 +38,7 @@ function searchBook() {
                 <td>{json[n].title}</td>
                 <td>{json[n].publishedDate}</td>
                 <td><img height="150" src={json[n].image} /></td>
-                <td><button className="btn btn-default">読む</button></td>
+                <td><button className="btn btn-default" onClick={openPdf}>読む</button></td>
               </tr>
       )
       const element = (
