@@ -32,3 +32,11 @@ class Books(models.Model):
     image = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     registerTime = models.DateTimeField()
+
+class Image(models.Model):
+    book_id = models.IntegerField(max_length=10)
+    image_path = models.CharField(max_length=255)
+
+class Pdf(models.Model):
+    book_id = models.IntegerField(max_length=10)
+    pdf_path = models.CharField(max_length=255)
